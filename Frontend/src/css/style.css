@@ -1,0 +1,167 @@
+:root {
+    /* css variables: https://developer.mozilla.org/en-US/docs/Web/CSS/var */
+    --primary-color: #131921;
+    --secondary-color: #fff;
+    --error-color: rgba(194, 0, 0, 0.71);
+}
+
+.background {
+    background-color: #eaeded;
+    margin: 0;
+    counter-reset: section;
+}
+
+.header {
+    /* Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0 20px;
+}
+
+.header_home {
+    font-size: 36px;
+    line-height: 40px;
+    height: 100px;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.header_nav_link {
+    margin-left: 20px;
+    vertical-align: top;
+    line-height: 40px;
+}
+
+.about {
+    margin-left: 20px;
+}
+
+.button, button {
+    background: #aed9ff;
+    padding: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.button:hover, button:hover {
+    background: #9cc3e4;
+}
+
+.card {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    margin: 20px;
+    padding: 10px 20px;
+}
+
+.validated-field:invalid {
+    outline: 2px solid var(--error-color);
+}
+.validated-field:focus:invalid {
+    color: var(--error-color);
+}
+
+.card-content {
+    max-width: 500px;
+}
+
+.card-content .form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+#concert-list li {
+    margin-bottom: 1rem;
+}
+
+.state {
+    display: none;
+}
+
+.state.active {
+    display: block;
+}
+
+/* -------------------------- */
+/*Modal CSS */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+.show-modal {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.75rem 3.5rem;
+    margin: 5rem 2rem;
+    border: none;
+    background-color: #fff;
+    color: #444;
+    border-radius: 10rem;
+    cursor: pointer;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #131921;
+}
+
+p {
+    font-size: 1.8rem;
+    color: #131921;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+
+    background-color: white;
+    padding: 6rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
